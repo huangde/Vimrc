@@ -1,0 +1,28 @@
+README file create by dhuang at 2012-04-06 Fri 07:17 PM
+
+everone has his own vimrc file, this one is trying to help speed up the workflow of fortran programmer.it is paritally base on http://dev.gentoo.org/~ciaranm/docs/vim-guide/, and has been modified to best fit the requirement of editing c/python/FORTRAN program.
+
+FEATURE:
+* C/FORTRAN/python syntax hightlight
+* code folding
+* fast switch between traditional vim and a IDE like interface(F5)
+* default UTF-8 encoding
+* type "make" to compile c/fortran program(not dependent on MAKEFILE).
+* type "make" to run python code in debug mode
+* python doc display in preview windows and tab auto-complelte
+* locate syntax error position for gfortran/intel fortran
+* comment c/FORTRAN/python with '\cc',and uncomment with '\cu'
+* code snippet insert for fortran/matlab
+
+PlUG-IN:
+* bufexplorer
+* NERD_commenter
+* supertab
+* winmanager
+* winfileexplorer
+* snippmate(with my FORTRAN/MATLAB snippet, read /snippets/fortran.snippets)
+
+USAGE:
+on linux-like system,copy the .vimrc and .vim to your home direcotry and you are done.
+
+

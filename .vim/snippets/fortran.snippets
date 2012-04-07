@@ -1,0 +1,80 @@
+#Fortran sytax snippet,created by dhuang at 2011-01-30 Sun 11:51 PM
+# Program 
+snippet program
+			Program ${1:main}
+		  		${2:/*Insert code here*/}
+	      	end Program
+# #include 
+snippet inc
+	include '${1:header}'${2}
+# If Condition
+snippet if
+	if (${1:/* condition */}) then
+		${2:/* code */}
+	${3:}
+	endif
+snippet else
+	else
+		${1:/*code*/}
+	${2:}
+snippet elseif
+	elseif (${1:/*condition*/}) then
+		${2:/*code*/}
+	${3:}
+# Tertiary conditional
+# Do Loop
+snippet do
+	do ${1:i}=1,${2:mx}
+		${3:/* code */}
+	enddo	
+# do While Loop
+snippet dw
+	do while (${1:/* condition */})
+		${2:/* code */}
+	enddo
+snippet pr
+	print *,${1:/*output here*/}
+snippet im
+	implicit none
+snippet imd
+	implicit double precision(a-z)
+#last edit by dhuang at 2011-01-31 Mon 01:02 AM 
+# Function
+snippet fun
+	${1:real*8} function ${2:function_name}(${3:*})
+
+		!only variables can be used as parameter,NO CONSTANT!!
+		${4:/*variables declaration*/}
+		${5:/* code */}
+		return
+	
+	end function
+# Subroutine Declaration
+snippet sub 
+	subroutine ${1:subroutine_name}(${2:*})
+
+		!only variables can be used as parameter,NO CONSTANT!!
+		${3:/*variables declaration*/}
+		${4:/* code */}
+		return
+	
+	end subroutine
+# array declaration
+snippet dimen
+	dimension ${1:arrayname}(${2:*},${3:*})
+# double precision array declaration
+snippet dimenr
+	real*8,dimension(${1:*},${2:*}) :: ${3}
+
+# open file
+snippet open
+	open(${1:*},file=${2:'filename'},status=${3:'replace'})
+# format read
+snippet read 
+	read(${1:*},${2:'(A,F10.5)'})${3}
+# format write
+snippet write
+	write(${1:*},${2:'(A,F10.5)'})${3}
+# define string
+snippet cha
+	character *${1:100} ${2:strname}

@@ -1,0 +1,49 @@
+#Matlab sytax snippet,created by dhuang at 2011-01-30 Sun 11:51 PM
+#last updated at 2011-01-31 Mon 07:10 PM by dhuang
+# clean workspace
+snippet clear
+	clear;clc;close all;
+# If Condition
+snippet if
+	if (${1:/* condition */})
+		${2:/* code */}
+	${3:}
+	end
+snippet else
+	else
+		${1:/*code*/}
+	${2:}
+snippet elseif
+	elseif (${1:/*condition*/}) 
+		${2:/*code*/}
+	${3:}
+# for Loop
+snippet for
+
+	for ${1:i}=1:${2:mx}
+		${3:/* code */}
+	end	
+#  While Loop
+snippet while
+	while (${1:/* condition */})
+		${2:/* code */}
+	end
+snippet fun
+	function ${1:return_value}=${2:fun_name}(${3:*})
+
+		%%%create a new m-file to define function
+		%%%unless this is a subfunction 
+		${4:/* code */}
+
+# open file
+snippet fopen
+	fid=fopen(${1:'filename'},${2:'r'});
+	${3:}
+# format read
+snippet fscanf 
+	buff=fscanf(${1:fid},${2:'%s,%10.5f\n'});
+	${3:}
+# format write
+snippet fprintf
+	fprintf(${1:fid},${2:'%s,%10.5f\n'});
+	${3:}
