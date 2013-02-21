@@ -199,7 +199,7 @@ el
 endif
     autocmd FileType python   set makeprg=python\ -d\ %
 ""set errformat for gfortran
-autocmd FileType fortran set efm=%E%f:%l.%c:,%E%f:%l:,%C,%C%p%*[0123456789^],%ZError:\ %m,%C%.%#
+autocmd FileType fortran set efm=%A%f:%l.%c:,%A%f:%l:,%C,%C%p%*[0123456789^],%Z%trror:\ %m,%Z%tarning:\ %m,%C%.%#
 "set errformat for intel fortran
 "set efm=%E%.%#rror:\ %f\\,\ line\ %l:\ %m,\%-C%.%#,\%-Z\%p^
 "let isf="@,48-57,/,.,-,_,+,#,^,,$,%,~,="
